@@ -351,6 +351,8 @@ String _textReplace(Match match) {
   switch (match.group(0)) {
     case '<':
       return '&lt;';
+    case '>':
+      return '&gt;';
     case '&':
       return '&amp;';
     case ']]>':
