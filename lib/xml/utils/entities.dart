@@ -345,7 +345,7 @@ typedef String ReplaceFunction(Match match);
 /// Encode a string to be serialized as an XML text node.
 String encodeXmlText(String input) => input.replaceAllMapped(_textPattern, _textReplace);
 
-final Pattern _textPattern = new RegExp(r'[&<]|]]>');
+final Pattern _textPattern = new RegExp(r'[&<>]|]]>');
 
 String _textReplace(Match match) {
   switch (match.group(0)) {
